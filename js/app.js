@@ -33,7 +33,7 @@ class App {
     };
 
     this.image = new Image();
-    this.image.src = "../img/nasa.jpeg";
+    this.image.src = "./../img/nasa.jpeg";
     this.image.onload = () => {
       this.isLoaded = true;
       this.drawImage();
