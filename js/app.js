@@ -32,14 +32,7 @@ class App {
       height: 0,
     };
 
-    this.image = new Image();
-    this.image.src =
-      "https://kimtothechang.github.io/interactive-pixel-art/img/nasa.jpeg";
-    // this.image.src = "./../interactive-pixel-art/img/nasa.jpeg";
-    this.image.onload = () => {
-      this.isLoaded = true;
-      this.drawImage();
-    };
+    this.loadImage();
 
     window.requestAnimationFrame(this.animate.bind(this));
 
@@ -62,6 +55,15 @@ class App {
     if (this.isLoaded) {
       this.drawImage();
     }
+  }
+
+  loadImage() {
+    this.image = new Image();
+    this.image.src = "./../img/nasa.jpeg";
+    this.image.onload = () => {
+      this.isLoaded = true;
+      this.drawImage();
+    };
   }
 
   drawImage() {
