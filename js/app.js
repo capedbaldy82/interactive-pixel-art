@@ -33,7 +33,9 @@ class App {
     };
 
     this.image = new Image();
-    this.image.src = "./../img/nasa.jpeg";
+    this.image.src =
+      "https://kimtothechang.github.io/interactive-pixel-art/img/nasa.jpeg";
+    // this.image.src = "./../interactive-pixel-art/img/nasa.jpeg";
     this.image.onload = () => {
       this.isLoaded = true;
       this.drawImage();
